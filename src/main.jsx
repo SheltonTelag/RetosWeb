@@ -9,6 +9,6 @@ import Cha4 from './Cha/c4/Cha4.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Challenge3 />
+    <Challenge2 />
   </React.StrictMode>,
 )

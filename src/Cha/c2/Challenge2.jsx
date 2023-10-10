@@ -1,27 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useCounter from '../c5/useCounter'
 
 const Challenge2 = () => {
+  const { count, increment, decrement, reset } = useCounter(0);
 
-    const [counter, setCounter] = useState(0);
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+};
 
-    const sumar = () => {
-        setCounter(counter+1)
-    }
-    const restar = () => {
-        setCounter(counter-1)
-    }
-    const reseteo = () => {
-        setCounter(0)
-    }
-
-    return <>
-        <h1>Challenge 2</h1>
-        
-        <span> {counter} </span>
-        <button onClick={sumar}>Sumar</button>
-        <button onClick={restar}>Sumar</button>
-        <button onClick={() => reseteo()}>reset</button>
-    </>
-}
-
-export default Challenge2
+export default Challenge2;
