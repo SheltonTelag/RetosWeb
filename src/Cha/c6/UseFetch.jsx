@@ -27,3 +27,4 @@ const UseFetch = (url) => {
         ...state
     }
 }
+export default UseFetch;
